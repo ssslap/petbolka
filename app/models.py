@@ -52,7 +52,7 @@ DOCTORS = [
         id=1,
         name="Әлиева Айгүл Серікқызы",
         specialization="Терапевт, хирург",
-        photo="/static/images/doctor1.svg",
+        photo="./static/images/doctor1.svg",
         resume="Қазақ ұлттық аграрлық университетін бітірген. Үй жануарларын емдеу және хирургия саласында 10 жылдан астам тәжірибесі бар.",
         experience_years=10
     ),
@@ -60,7 +60,7 @@ DOCTORS = [
         id=2,
         name="Сәрсенбаев Нұрлан Қайратұлы",
         specialization="Кардиолог, УЗИ-маманы",
-        photo="/static/images/doctor2.svg",
+        photo="./static/images/doctor2.svg",
         resume="Ветеринария ғылымдарының кандидаты. Жануарлардың жүрек-қан тамырлары жүйесінің ауруларын диагностикалау және емдеу саласының маманы.",
         experience_years=15
     ),
@@ -68,7 +68,7 @@ DOCTORS = [
         id=3,
         name="Тұрсынова Дана Маратқызы",
         specialization="Дерматолог, аллерголог",
-        photo="/static/images/doctor3.svg",
+        photo="./static/images/doctor3.svg",
         resume="Жануарлардың тері аурулары мен аллергия саласының маманы. Халықаралық конференцияларда біліктілігін үнемі арттырып отырады.",
         experience_years=8
     ),
@@ -76,7 +76,7 @@ DOCTORS = [
         id=4,
         name="Омаров Ерлан Бауыржанұлы",
         specialization="Стоматолог, офтальмолог",
-        photo="/static/images/doctor4.svg",
+        photo="./static/images/doctor4.svg",
         resume="Жануарлардың тіс және көз ауруларының маманы. Күрделі стоматологиялық операциялар жүргізеді.",
         experience_years=12
     ),

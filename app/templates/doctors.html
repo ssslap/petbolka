@@ -18,7 +18,7 @@
             {% for doctor in doctors %}
             <div class="doctor-card-full">
                 <div class="doctor-photo-large">
-                    <img src="{{ doctor.photo }}" alt="{{ doctor.name }}" onerror="this.src='/static/images/doctor-placeholder.svg'">
+                    <img src="{{ doctor.photo }}" alt="{{ doctor.name }}" onerror="this.src='./static/images/doctor-placeholder.svg'">
                 </div>
                 <div class="doctor-details">
                     <h2>{{ doctor.name }}</h2>
