@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}{{ clinic.name }} - Басты бет{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1><span class="highlight">Үй жануарларыңыздың</span> денсаулығына қамқорлық</h1>
+            <p class="hero-text">Аптасына 7 күн кәсіби ветеринариялық көмек. Тәжірибелі мамандар, заманауи жабдықтар және әр пациентке жеке көзқарас.</p>
+            <div class="hero-buttons">
+                <a href="appointment.html" class="btn btn-primary btn-lg">Қабылдауға жазылу</a>
+                <a href="services.html" class="btn btn-outline btn-lg">Біздің қызметтер</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">жыл тәжірибе</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10000+</span>
+                    <span class="stat-label">бақытты клиенттер</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">жедел көмек</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/static/images/hero-pet.svg" alt="Бақытты үй жануарлары">
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features section">
+    <div class="container">
+        <h2 class="section-title">Неліктен бізді таңдайды</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">👨‍⚕️</div>
+                <h3>Тәжірибелі дәрігерлер</h3>
+                <p>Біздің мамандар көп жылдық тәжірибеге ие және үнемі біліктілігін арттырады</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏥</div>
+                <h3>Заманауи жабдықтар</h3>
+                <p>Біз озық диагностикалық және емдеу жабдықтарын қолданамыз</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <h3>Жануарларға махаббат</h3>
+                <p>Әр үй жануары отбасы мүшесі сияқты қамқорлық пен көңіл бөлуге ие болады</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚗</div>
+                <h3>Үйге шақыру</h3>
+                <p>Егер үй жануары келе алмаса - дәрігер сіздің үйіңізге келеді</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview Section -->
+<section class="services-preview section section-alt">
+    <div class="container">
+        <h2 class="section-title">Біздің қызметтер</h2>
+        <p class="section-subtitle">Үй жануарларыңыз үшін ветеринариялық қызметтердің толық спектрі</p>
+        <div class="services-grid">
+            {% for service in services %}
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>{{ service.name }}</h3>
+                    <span class="service-price">{{ service.price | int }} ₸</span>
+                </div>
+                <p>{{ service.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="section-cta">
+            <a href="services.html" class="btn btn-primary">Барлық қызметтер</a>
+        </div>
+    </div>
+</section>
+
+<!-- Doctors Preview Section -->
+<section class="doctors-preview section">
+    <div class="container">
+        <h2 class="section-title">Біздің дәрігерлер</h2>
+        <p class="section-subtitle">Біздің кәсіби мамандар тобымен танысыңыз</p>
+        <div class="doctors-grid">
+            {% for doctor in doctors %}
+            <div class="doctor-card">
+                <div class="doctor-photo">
+                    <img src="{{ doctor.photo }}" alt="{{ doctor.name }}" onerror="this.src='/static/images/doctor-placeholder.svg'">
+                </div>
+                <div class="doctor-info">
+                    <h3>{{ doctor.name }}</h3>
+                    <span class="doctor-specialization">{{ doctor.specialization }}</span>
+                    <p class="doctor-experience">Жұмыс тәжірибесі: {{ doctor.experience_years }} жыл</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="section-cta">
+            <a href="doctors.html" class="btn btn-primary">Барлық дәрігерлер</a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Кеңес қажет пе?</h2>
+            <p>Қазір қабылдауға жазылыңыз немесе бізге қоңырау шалыңыз</p>
+            <div class="cta-buttons">
+                <a href="appointment.html" class="btn btn-primary btn-lg">Онлайн жазылу</a>
+                <a href="tel:{{ clinic.phone }}" class="btn btn-outline btn-lg">{{ clinic.phone }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

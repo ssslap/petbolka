@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}Байланыс - {{ clinic.name }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Байланыс</h1>
+        <p>Бізбен кез келген ыңғайлы жолмен байланысыңыз</p>
+    </div>
+</section>
+
+<!-- Contact Info -->
+<section class="contact-section section">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <h2>Бізбен қалай байланысуға болады</h2>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-text">
+                        <h3>Мекенжай</h3>
+                        <p>{{ clinic.address }}</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-text">
+                        <h3>Телефон</h3>
+                        <p><a href="tel:{{ clinic.phone }}">{{ clinic.phone }}</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p><a href="mailto:{{ clinic.email }}">{{ clinic.email }}</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <div class="contact-text">
+                        <h3>Жұмыс уақыты</h3>
+                        <p>{{ clinic.working_hours }}</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>Біз әлеуметтік желілерде</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-icon" aria-label="Telegram">TG</a>
+                        <a href="#" class="social-icon" aria-label="WhatsApp">WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>Бізге жазыңыз</h2>
+                <p>Біз сіздің сұрақтарыңызға тез арада жауап береміз</p>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Сіздің атыңыз *</label>
+                        <input type="text" id="name" name="name" required placeholder="Атыңызды енгізіңіз">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="Email енгізіңіз">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Хабарлама *</label>
+                        <textarea id="message" name="message" required rows="5" placeholder="Хабарламаңызды енгізіңіз"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Хабарлама жіберу</button>
+                </form>
+                
+                <div id="formMessage" class="form-message" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+    <div class="container">
+        <h2 class="section-title">Бізді қалай табуға болады</h2>
+        <div class="map-placeholder">
+            <div class="map-content">
+                <span class="map-icon">🗺️</span>
+                <p>{{ clinic.address }}</p>
+                <a href="https://2gis.kz" target="_blank" class="btn btn-outline">Картадан ашу</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const formMessage = document.getElementById('formMessage');
+    
+    // Для статического сайта - просто показываем сообщение
+    formMessage.className = 'form-message success';
+    formMessage.innerHTML = 'Хабарламаңыз үшін рахмет! Біз сізбен жақын арада байланысамыз.';
+    formMessage.style.display = 'block';
+    this.reset();
+    
+    // Скрыть сообщение через 5 секунд
+    setTimeout(() => {
+        formMessage.style.display = 'none';
+    }, 5000);
+});
+</script>
+{% endblock %}

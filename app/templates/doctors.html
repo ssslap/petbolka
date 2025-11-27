@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Біздің дәрігерлер - {{ clinic.name }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Біздің дәрігерлер</h1>
+        <p>Үй жануарларыңыздың денсаулығын сеніп тапсыра алатын тәжірибелі мамандар тобы</p>
+    </div>
+</section>
+
+<!-- Doctors List -->
+<section class="doctors-list section">
+    <div class="container">
+        <div class="doctors-full-grid">
+            {% for doctor in doctors %}
+            <div class="doctor-card-full">
+                <div class="doctor-photo-large">
+                    <img src="{{ doctor.photo }}" alt="{{ doctor.name }}" onerror="this.src='/static/images/doctor-placeholder.svg'">
+                </div>
+                <div class="doctor-details">
+                    <h2>{{ doctor.name }}</h2>
+                    <span class="doctor-specialization-badge">{{ doctor.specialization }}</span>
+                    <div class="doctor-stats">
+                        <div class="doctor-stat">
+                            <span class="stat-value">{{ doctor.experience_years }}</span>
+                            <span class="stat-text">жыл тәжірибе</span>
+                        </div>
+                        <div class="doctor-stat">
+                            <span class="stat-value">⭐</span>
+                            <span class="stat-text">жоғары рейтинг</span>
+                        </div>
+                    </div>
+                    <p class="doctor-resume">{{ doctor.resume }}</p>
+                    <a href="appointment.html?doctor={{ doctor.id }}" class="btn btn-primary">Дәрігерге жазылу</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Why Our Doctors -->
+<section class="why-doctors section section-alt">
+    <div class="container">
+        <h2 class="section-title">Неліктен біздің дәрігерлер — ең жақсы</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3>Жоғары біліктілік</h3>
+                <p>Біздің барлық дәрігерлер жоғары ветеринариялық білімге ие және үнемі біліктілігін арттырады</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Тұрақты оқу</h3>
+                <p>Жетекші мамандардың конференцияларына, семинарларына және мастер-кластарына үнемі қатысу</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3>Әріптестердің мойындауы</h3>
+                <p>Біздің мамандар өз салаларында сарапшы ретінде мойындалған</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💝</div>
+                <h3>Жануарларға махаббат</h3>
+                <p>Біздің команданың әр мүшесі бұл мамандықты шақыру бойынша таңдаған</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Өз дәрігеріңізді таңдаңыз</h2>
+            <p>Қажетті маманға қазір жазылыңыз</p>
+            <a href="appointment.html" class="btn btn-primary btn-lg">Қабылдауға жазылу</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

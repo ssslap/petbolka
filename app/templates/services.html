@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Қызметтер - {{ clinic.name }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Біздің қызметтер</h1>
+        <p>Үй жануарларыңыздың денсаулығы үшін ветеринариялық қызметтердің толық спектрі</p>
+    </div>
+</section>
+
+<!-- Services List -->
+<section class="services-list section">
+    <div class="container">
+        <div class="services-full-grid">
+            {% for service in services %}
+            <div class="service-card-full">
+                <div class="service-icon">
+                    {% if 'тексеру' in service.name.lower() %}
+                    🩺
+                    {% elif 'вакцин' in service.name.lower() %}
+                    💉
+                    {% elif 'удз' in service.name.lower() %}
+                    📊
+                    {% elif 'рентген' in service.name.lower() %}
+                    📷
+                    {% elif 'анализ' in service.name.lower() %}
+                    🔬
+                    {% elif 'стерилизац' in service.name.lower() or 'кастрац' in service.name.lower() %}
+                    ⚕️
+                    {% elif 'тіс' in service.name.lower() %}
+                    🦷
+                    {% elif 'тырнақ' in service.name.lower() %}
+                    ✂️
+                    {% elif 'чип' in service.name.lower() %}
+                    📡
+                    {% elif 'үйге' in service.name.lower() %}
+                    🚗
+                    {% else %}
+                    🏥
+                    {% endif %}
+                </div>
+                <div class="service-content">
+                    <h3>{{ service.name }}</h3>
+                    <p>{{ service.description }}</p>
+                    <div class="service-meta">
+                        <span class="service-duration">⏱ {{ service.duration_minutes }} мин</span>
+                        <span class="service-price-tag">{{ service.price | int }} ₸</span>
+                    </div>
+                </div>
+                <a href="appointment.html" class="btn btn-outline btn-sm">Жазылу</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Additional Info -->
+<section class="services-info section section-alt">
+    <div class="container">
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>💳 Төлем тәсілдері</h3>
+                <ul>
+                    <li>Қолма-қол ақша</li>
+                    <li>Банк карталары</li>
+                    <li>Қолма-қолсыз есеп айырысу</li>
+                    <li>QR-код арқылы төлем</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>📋 Өзіңізбен не алу керек</h3>
+                <ul>
+                    <li>Үй жануарының ветеринариялық паспорты</li>
+                    <li>Бұрынғы анализдердің нәтижелері (бар болса)</li>
+                    <li>Тасымалдағыш немесе бау</li>
+                    <li>Үй жануарыңыздың сүйікті тағамы</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>ℹ️ Маңызды ақпарат</h3>
+                <ul>
+                    <li>Анализдерден алдын - 8-12 сағат аш диета</li>
+                    <li>Вакцинацияға - тек сау жануарлар</li>
+                    <li>Жоспарлы операциялар алдында - паразиттерден өңдеу 10 күн бұрын</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Қажетті қызметті таппадыңыз ба?</h2>
+            <p>Бізге қоңырау шалыңыз, біз сізге кез келген сұрақ бойынша кеңес береміз</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary btn-lg">Бізбен байланысу</a>
+                <a href="tel:{{ clinic.phone }}" class="btn btn-outline btn-lg">{{ clinic.phone }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

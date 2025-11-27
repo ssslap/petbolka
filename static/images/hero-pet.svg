@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F5E9"/>
+      <stop offset="100%" style="stop-color:#C8E6C9"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="250" cy="200" r="180" fill="url(#bg-gradient)"/>
+  
+  <!-- Dog body -->
+  <ellipse cx="200" cy="250" rx="70" ry="50" fill="#8D6E63"/>
+  
+  <!-- Dog head -->
+  <circle cx="140" cy="200" r="45" fill="#A1887F"/>
+  
+  <!-- Dog ear -->
+  <ellipse cx="110" cy="170" rx="20" ry="35" fill="#6D4C41"/>
+  
+  <!-- Dog nose -->
+  <ellipse cx="110" cy="205" rx="12" ry="10" fill="#3E2723"/>
+  
+  <!-- Dog eye -->
+  <circle cx="135" cy="185" r="8" fill="#3E2723"/>
+  <circle cx="138" cy="183" r="3" fill="white"/>
+  
+  <!-- Dog tail -->
+  <path d="M 270 240 Q 310 200 290 160" stroke="#8D6E63" stroke-width="15" fill="none" stroke-linecap="round"/>
+  
+  <!-- Dog legs -->
+  <rect x="160" y="280" width="15" height="40" rx="7" fill="#6D4C41"/>
+  <rect x="200" y="280" width="15" height="40" rx="7" fill="#6D4C41"/>
+  <rect x="230" y="280" width="15" height="40" rx="7" fill="#6D4C41"/>
+  
+  <!-- Cat body -->
+  <ellipse cx="340" cy="260" rx="50" ry="40" fill="#FFB74D"/>
+  
+  <!-- Cat head -->
+  <circle cx="380" cy="210" r="35" fill="#FFCC80"/>
+  
+  <!-- Cat ears -->
+  <polygon points="355,175 365,145 385,175" fill="#FFB74D"/>
+  <polygon points="395,175 405,145 415,175" fill="#FFB74D"/>
+  
+  <!-- Cat inner ears -->
+  <polygon points="360,175 368,155 380,175" fill="#FFAB91"/>
+  <polygon points="398,175 405,155 412,175" fill="#FFAB91"/>
+  
+  <!-- Cat eyes -->
+  <ellipse cx="370" cy="200" rx="6" ry="8" fill="#4CAF50"/>
+  <ellipse cx="395" cy="200" rx="6" ry="8" fill="#4CAF50"/>
+  <ellipse cx="370" cy="200" rx="2" ry="6" fill="#1B5E20"/>
+  <ellipse cx="395" cy="200" rx="2" ry="6" fill="#1B5E20"/>
+  
+  <!-- Cat nose -->
+  <polygon points="382,215 378,222 386,222" fill="#E91E63"/>
+  
+  <!-- Cat whiskers -->
+  <line x1="355" y1="218" x2="330" y2="213" stroke="#795548" stroke-width="1"/>
+  <line x1="355" y1="222" x2="330" y2="222" stroke="#795548" stroke-width="1"/>
+  <line x1="355" y1="226" x2="330" y2="231" stroke="#795548" stroke-width="1"/>
+  <line x1="405" y1="218" x2="430" y2="213" stroke="#795548" stroke-width="1"/>
+  <line x1="405" y1="222" x2="430" y2="222" stroke="#795548" stroke-width="1"/>
+  <line x1="405" y1="226" x2="430" y2="231" stroke="#795548" stroke-width="1"/>
+  
+  <!-- Cat tail -->
+  <path d="M 290 260 Q 260 220 280 180" stroke="#FFB74D" stroke-width="12" fill="none" stroke-linecap="round"/>
+  
+  <!-- Cat legs -->
+  <rect x="315" y="285" width="12" height="30" rx="6" fill="#E65100"/>
+  <rect x="350" y="285" width="12" height="30" rx="6" fill="#E65100"/>
+  
+  <!-- Hearts -->
+  <path d="M 250 100 C 240 80 220 80 220 100 C 220 120 250 140 250 140 C 250 140 280 120 280 100 C 280 80 260 80 250 100" fill="#E91E63"/>
+  <path d="M 180 320 C 175 310 165 310 165 320 C 165 330 180 340 180 340 C 180 340 195 330 195 320 C 195 310 185 310 180 320" fill="#E91E63" opacity="0.7"/>
+  <path d="M 350 340 C 343 327 328 327 328 340 C 328 353 350 367 350 367 C 350 367 372 353 372 340 C 372 327 357 327 350 340" fill="#E91E63" opacity="0.5"/>
+  
+  <!-- Paw prints -->
+  <g fill="#4CAF50" opacity="0.3">
+    <circle cx="420" cy="120" r="8"/>
+    <circle cx="410" cy="105" r="5"/>
+    <circle cx="420" cy="100" r="5"/>
+    <circle cx="430" cy="105" r="5"/>
+  </g>
+  <g fill="#4CAF50" opacity="0.3">
+    <circle cx="80" cy="300" r="8"/>
+    <circle cx="70" cy="285" r="5"/>
+    <circle cx="80" cy="280" r="5"/>
+    <circle cx="90" cy="285" r="5"/>
+  </g>
+</svg>
