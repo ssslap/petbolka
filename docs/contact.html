@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тәжірибелі мамандар мен заманауи жабдықтары бар қазіргі заманғы ветеринариялық клиника. Біз 15 жылдан астам уақыт бойы сіздің үй жануарларыңыздың денсаулығына қамқорлық жасаймыз.">
+    <meta name="keywords" content="ветеринарная клиника, ветеринар, лечение животных, вакцинация, УЗИ">
+    <title>Байланыс - «Дені сау үй жануары» ветклиникасы</title>
+    <link rel="icon" type="image/svg+xml" href="/static/images/favicon.svg">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🐾</span>
+                    <span class="logo-text">«Дені сау үй жануары» ветклиникасы</span>
+                </a>
+                <button class="nav-toggle" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Басты бет</a></li>
+                    <li><a href="services.html" class="nav-link">Қызметтер</a></li>
+                    <li><a href="doctors.html" class="nav-link">Дәрігерлер</a></li>
+                    <li><a href="contact.html" class="nav-link">Байланыс</a></li>
+                    <li><a href="appointment.html" class="nav-link btn btn-primary">Жазылу</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Байланыс</h1>
+        <p>Бізбен кез келген ыңғайлы жолмен байланысыңыз</p>
+    </div>
+</section>
+
+<!-- Contact Info -->
+<section class="contact-section section">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <h2>Бізбен қалай байланысуға болады</h2>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-text">
+                        <h3>Мекенжай</h3>
+                        <p>Астана қ., Бокейханова 13/1</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-text">
+                        <h3>Телефон</h3>
+                        <p><a href="tel:+7 (727) 123-45-67">+7 (727) 123-45-67</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@vetclinic.kz">info@vetclinic.kz</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <div class="contact-text">
+                        <h3>Жұмыс уақыты</h3>
+                        <p>Дс-Жм: 9:00-21:00, Сб-Жс: 10:00-18:00</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>Біз әлеуметтік желілерде</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-icon" aria-label="Telegram">TG</a>
+                        <a href="#" class="social-icon" aria-label="WhatsApp">WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>Бізге жазыңыз</h2>
+                <p>Біз сіздің сұрақтарыңызға тез арада жауап береміз</p>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Сіздің атыңыз *</label>
+                        <input type="text" id="name" name="name" required placeholder="Атыңызды енгізіңіз">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="Email енгізіңіз">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Хабарлама *</label>
+                        <textarea id="message" name="message" required rows="5" placeholder="Хабарламаңызды енгізіңіз"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Хабарлама жіберу</button>
+                </form>
+                
+                <div id="formMessage" class="form-message" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+    <div class="container">
+        <h2 class="section-title">Бізді қалай табуға болады</h2>
+        <div class="map-placeholder">
+            <div class="map-content">
+                <span class="map-icon">🗺️</span>
+                <p>Астана қ., Бокейханова 13/1</p>
+                <a href="https://2gis.kz" target="_blank" class="btn btn-outline">Картадан ашу</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>«Дені сау үй жануары» ветклиникасы</h3>
+                    <p>Тәжірибелі мамандар мен заманауи жабдықтары бар қазіргі заманғы ветеринариялық клиника. Біз 15 жылдан астам уақыт бойы сіздің үй жануарларыңыздың денсаулығына қамқорлық жасаймыз.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Байланыс</h3>
+                    <ul class="footer-contacts">
+                        <li>📍 Астана қ., Бокейханова 13/1</li>
+                        <li>📞 +7 (727) 123-45-67</li>
+                        <li>✉️ info@vetclinic.kz</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Жұмыс уақыты</h3>
+                    <p>Дс-Жм: 9:00-21:00, Сб-Жс: 10:00-18:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Навигация</h3>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Басты бет</a></li>
+                        <li><a href="services.html">Қызметтер</a></li>
+                        <li><a href="doctors.html">Дәрігерлер</a></li>
+                        <li><a href="contact.html">Байланыс</a></li>
+                        <li><a href="appointment.html">Қабылдауға жазылу</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 «Дені сау үй жануары» ветклиникасы. Барлық құқықтар қорғалған.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+    
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const formMessage = document.getElementById('formMessage');
+    
+    // Для статического сайта - просто показываем сообщение
+    formMessage.className = 'form-message success';
+    formMessage.innerHTML = 'Хабарламаңыз үшін рахмет! Біз сізбен жақын арада байланысамыз.';
+    formMessage.style.display = 'block';
+    this.reset();
+    
+    // Скрыть сообщение через 5 секунд
+    setTimeout(() => {
+        formMessage.style.display = 'none';
+    }, 5000);
+});
+</script>
+
+</body>
+</html>
